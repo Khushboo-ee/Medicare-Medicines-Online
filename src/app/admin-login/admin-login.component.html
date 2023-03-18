@@ -1,0 +1,43 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="container text-center">
+                    <img class="img-fluid" style="width: 100px;" src="/assets/images/admin-icon1.png" alt="admin icon" />
+                </div>
+              
+                <!-- <a routerLink mat-raised-button color="accent"></a> -->
+                <h1 class="text-center">Admin Login </h1>
+
+                <!-- creating form (ngSubmit)="onSubmit()"
+                
+            -->
+
+            <form >
+                <div class="text-center">
+                    <mat-form-field class="full-width" appearance="outline" >
+                        <mat-label>Username</mat-label>
+                        <input  name="username" required type="text" [(ngModel)]="model.username" matInput />
+                    </mat-form-field>
+                    <br />
+
+                    <mat-form-field class="full-width" appearance="outline" >
+                        <mat-label>Password</mat-label>
+                        <input  name="password" required type="password" [(ngModel)]="model.password" matInput />
+                    </mat-form-field>
+                </div>
+                    <div class="text-center">
+                        <button type="submit" (click)=" loginAdmin()" mat-raised-button color="accent">Login</button>
+                        <button style="margin-left: 20px;" type="reset" mat-raised-button color="primary">Reset</button>
+                    </div>
+
+                    <div class="container text-center mt" style="color: red;">
+                        {{msg}}
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
